@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual - Bienestar Canino</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            font-size: 1.1rem;
+        }
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .module {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .module h2 {
+            color: #4CAF50;
+            font-size: 2rem;
+        }
+        .activity {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+        }
+        .forum {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #e9f5e9;
+        }
+        .forum h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .forum button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        .forum button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .upload {
+            margin-top: 1rem;
+        }
+        .upload input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .mapa-conceptual {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #e9f5e9;
+        }
+        .mapa-conceptual h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .mapa-conceptual .concepts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .mapa-conceptual .concept {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: 18%;
+            text-align: center;
+            cursor: grab;
+        }
+        .plan-ejercicios {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #e9f5e9;
+        }
+        .plan-ejercicios h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .plan-ejercicios a {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        .plan-ejercicios textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aula Virtual - Bienestar Canino</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#modulo1">¿Qué es el perro?</a></li>
+            <li><a href="#modulo2">Las cinco libertades</a></li>
+            <li><a href="#modulo3">Comunicación canina</a></li>
+            <li><a href="#modulo4">Responsabilidades del tenedor</a></li>
+            <li><a href="#modulo5">Salud preventiva</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="modulo1" class="module">
+            <h2>¿Qué es el perro?</h2>
+            <p>En este módulo, aprenderás sobre el origen del perro, su evolución, sus características biológicas y comportamentales que lo diferencian de otros animales.</p>
+            <div class="activity">
+                <h3>Actividad reflexiva: Caso hipotético - Juan y su deseo de adoptar un Husky</h3>
+                <p><strong>Introducción del caso:</strong> Se presenta el siguiente escenario: Juan vive en un apartamento pequeño en Bogotá y ha estado pensando en adoptar un Husky Siberiano. A Juan siempre le ha atraído esta raza debido a su apariencia y energía, pero no está seguro de si es la mejor opción para su entorno. A través de esta actividad, los participantes ayudarán a Juan a reflexionar sobre los factores que debe considerar antes de tomar la decisión de adoptar.</p>
+                <p><strong>Descripción de la actividad:</strong> Los participantes analizarán el caso ficticio para comprender cómo las características de las razas caninas influyen en sus necesidades y en su capacidad para adaptarse a diferentes entornos familiares.</p>
+            </div>
+            <div class="activity">
+                <h3>Actividad: Crucigrama</h3>
+                <p>Los participantes accederán a la actividad de crucigrama en la plataforma y tendrán 15 minutos para resolverlo. Este tiempo estará destinado a que ellos identifiquen y recuerden los conceptos claves que fueron explicados previamente, utilizando las pistas proporcionadas en cada casilla. Algunas de las palabras que aparecerán en el crucigrama son:</p>
+                <ul>
+                    <li>Domesticación</li>
+                    <li>Pelaje</li>
+                    <li>Lobo</li>
+                    <li>Raza</li>
+                    <li>Adaptación</li>
+                    <li>Ejercicio</li>
+                    <li>Reproducción</li>
+                </ul>
+            </div>
+            <div class="forum">
+                <h3>Foro de Opiniones</h3>
+                <p>Comparte tus opiniones y reflexiones sobre el caso de Juan y la adopción de un Husky. ¡Tu voz es importante!</p>
+                <textarea rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+                <button class="btn" style="margin-top: 1rem;">Enviar comentario</button>
+            </div>
+            <a href="#" class="btn">Ir al módulo</a>
+        </section>
+
+        <section id="modulo2" class="module">
+            <h2>Las cinco libertades</h2>
+            <p>Conoce las cinco libertades básicas que deben garantizarse para el bienestar animal. Son principios fundamentales para asegurar la calidad de vida de los perros.</p>
+            <div class="activity">
+                <h3>Actividad: Nube de Ideas - ¿Por qué quieres tener un perro?</h3>
+                <p>Los participantes crearán una nube de ideas donde plasmarán las razones por las cuales desean tener un perro. Cada razón será una nube en el mural virtual. Los participantes deberán agrupar sus ideas por categorías y definir qué factores deben tener en cuenta para garantizar el bienestar del perro.</p>
+            </div>
+            <a href="#" class="btn">Ir al módulo</a>
+        </section>
+   <section id="modulo3" class="module">
+    <h2>Comunicación canina</h2>
+    <p>Aprenderemos sobre cómo los perros se comunican con otros perros y con los humanos, y cómo interpretar su lenguaje corporal.</p>
+    
+    <div class="activity">
+        <h3>Actividad: Estudio de folleto sobre señales de calma</h3>
+        <p>Los tenedores estudiarán un folleto donde se presentan las distintas señales de calma que existen, como bostezar, lamerse, posición de juego y caminar despacio. Después de estudiar el folleto, los participantes deberán completar un cuestionario en el que identificarán qué mensajes desea transmitir el perro a través de sus señales de calma.</p>
+        <h4>Cuestionario</h4>
+        <ol>
+            <li>¿Qué son las señales de calma?</li>
+            <li>¿Por qué razón un perro comienza a caminar despacio?</li>
+            <li>¿Qué señal de calma realiza el perro cuando quiere evitar un enfrentamiento entre dos personas o otros perros?</li>
+            <li>¿Qué señal de calma debería emplear el tenedor cuando el perro no se quiere acercar a él por miedo?</li>
+            <li>¿Por qué es importante que todos los tenedores sepan interpretar las distintas señales de calma que exprese el perro?</li>
+        </ol>
+    </div>
+
+    <div class="activity">
+        <h3>Actividad: Video sobre señales de calma</h3>
+        <p>Los participantes verán un video contextual donde se presenta un perro en distintas situaciones donde realice las señales de calma. El video comenzará con el facilitador explicando qué son las señales de calma y por qué es importante que los tenedores de perros comprendan e interpreten correctamente las señales que expresa su mascota. Además, se explicará qué señales de calma puede utilizar el propio tenedor con su perro. En la segunda parte, se mostrará a un perro en 13 situaciones diferentes, cada una simulada para ilustrar una señal de calma diferente, que incluirá:</p>
+        <ul>
+            <li>Mover la cabeza</li>
+            <li>Girarse o dar la espalda</li>
+            <li>Lamerse el hocico</li>
+            <li>Inmovilizarse</li>
+            <li>Andar despacio</li>
+            <li>Posición de juego</li>
+            <li>Sentarse</li>
+            <li>Echarse</li>
+            <li>Bostezar</li>
+            <li>Olisquear</li>
+            <li>Dar un rodeo</li>
+            <li>Interponerse</li>
+            <li>Mover la cola</li>
+        </ul>
+    </div>
+    
+    <div class="forum">
+        <h3>Foro de Reflexión</h3>
+        <p>Después de mirar el video, publica tu opinión guiándote por la pregunta orientadora: ¿Cree usted que los tenedores comprendan e interpreten las distintas señales de calma en los perros mejore la relación de su mascota con usted y demás perros?</p>
+        <textarea rows="4" placeholder="Escribe tu reflexión aquí..."></textarea>
+        <button class="btn" style="margin-top: 1rem;">Publicar reflexión</button>
+    </div>
+    
+    <div class="activity">
+        <h3>Actividad: Sopa de letras</h3>
+        <p>Resuelve la sopa de letras encontrando las siguientes ocho palabras:</p>
+        <ul>
+            <li>relación</li>
+            <li>comunicación</li>
+            <li>bienestar</li>
+            <li>calma</li>
+            <li>olisquear</li>
+            <li>echarse</li>
+            <li>inmovilizarse</li>
+            <li>autocontrol</li>
+        </ul>
+        <div id="sopaDeLetras">
+            <table>
+                <tr>
+                    <td>r</td>
+                    <td>e</td>
+                    <td>l</td>
+                    <td>a</td>
+                    <td>c</td>
+                    <td>i</td>
+                    <td>ó</td>
+                    <td>n</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>o</td>
+                    <td>m</td>
+                    <td>u</td>
+                    <td>n</td>
+                    <td>i</td>
+                    <td>c</td>
+                    <td>ación</td>
+                </tr>
+                <tr>
+                    <td>b</td>
+                    <td>i</td>
+                    <td>e</td>
+                    <td>n</td>
+                    <td>e</td>
+                    <td>s</td>
+                    <td>t</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>a</td>
+                    <td>l</td>
+                    <td>m</td>
+                    <td>a</td>
+                    <td>o</td>
+                    <td>l</td>
+                    <td>isquear</td>
+                </tr>
+                <tr>
+                    <td>e</td>
+                    <td>c</td>
+                    <td>h</td>
+                    <td>a</td>
+                    <td>r</td>
+                    <td>s</td>
+                    <td>e</td>
+                    <td>i</td>
+                </tr>
+                <tr>
+                    <td>i</td>
+                    <td>n</td>
+                    <td>m</td>
+                    <td>o</td>
+                    <td>v</td>
+                    <td>i</td>
+                    <td>l</td>
+                    <td>i</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>u</td>
+                    <td>t</td>
+                    <td>o</td>
+                    <td>c</td>
+                    <td>o</td>
+                    <td>ntrol</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <div id="resultado"></div>
+    </div>
+    <a href="#" class="btn">Ir al módulo</a>
+</section>
+
+<script>
+function checkAnswers() {
+    const words = ['relación', 'comunicación', 'bienestar', 'calma', 'olisquear', 'echarse', 'inmovilizarse', 'autocontrol'];
+    const foundWords = words.map(word => `<li>${word}</li>`).join('');
+    document.getElementById('resultado').innerHTML = `<h4>Palabras encontradas:</h4><ul>${foundWords}</ul>`;
+}
+</script>
+
+<style>
+    #sopaDeLetras {
+        margin-top: 1rem;
+        display: inline-block;
+        position: relative;
+    }
+    
+    #sopaDeLetras table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 18px;
+    }
+
+    #sopaDeLetras td {
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        text-align: center;
+        font-weight: bold;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+
+    #sopaDeLetras td:hover {
+        background-color: #d1e7dd;
+    }
+
+    .activity {
+        margin-bottom: 2rem;
+    }
+</style>
+
+<section id="moduloResponsabilidades" class="module">
+    <h2>Responsabilidades del Tenedor de Perros</h2>
+    <p>En este módulo, exploraremos las responsabilidades que tienen los tenedores de perros, incluyendo la alimentación adecuada y la actividad física.</p>
+
+    <div class="activity">
+        <h3>Actividad 1: Nutrientes Principales en la Dieta Canina</h3>
+        <p>Guiándose de la pregunta orientadora: ¿Cuáles son los nutrientes principales que debería tener un perro en su dieta? Investigue sobre los nutrientes fundamentales en la alimentación canina.</p>
+        
+        <div class="task">
+            <h4>Tarea 1.1</h4>
+            <p>Publicar en un foro la respuesta a la pregunta orientadora, basándose en su investigación.</p>
+            <textarea rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+            <button class="btn" style="margin-top: 1rem;">Publicar respuesta</button>
+        </div>
+        
+        <div class="task">
+          <div class="mapa-conceptual">
+    <h3>Mapa Conceptual - Responsabilidades del Tenedor de Perros</h3>
+    <p>Los participantes explorarán un mapa conceptual interactivo sobre las responsabilidades del tenedor de perros, donde podrán arrastrar y soltar conceptos clave en las categorías correctas.</p>
+    <div class="concepts">
+        <div class="concept" draggable="true" ondragstart="drag(event)">Alimentación</div>
+        <div class="concept" draggable="true" ondragstart="drag(event)">Nutrientes</div>
+        <div class="concept" draggable="true" ondragstart="drag(event)">Vitaminas</div>
+        <div class="concept" draggable="true" ondragstart="drag(event)">Agua</div>
+        <div class="concept" draggable="true" ondragstart="drag(event)">Salud</div>
+    </div>
+    <div id="dropArea" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px dashed #ccc; padding: 10px; margin-top: 10px;">
+        <h5>Arrastra los conceptos aquí:</h5>
+    </div>
+</div>
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.innerHTML);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.innerHTML += "<div>" + data + "</div>"; // Muestra el concepto en el área de caída
+}
+</script>
+
+    <div class="activity">
+        <h3>Actividad 2: Plan de Ejercicios Semanal</h3>
+        <p>Los participantes deben elaborar un plan de ejercicios semanal para su perro utilizando una plantilla que ya estará subida.</p>
+        <a href="plantilla-plan-ejercicios.pdf" class="btn">Descargar plantilla de plan de ejercicios</a>
+
+        <div class="task">
+            <h4>Tarea 2.1</h4>
+            <p>Grabe un video de máximo 5 minutos donde se evidencie cómo su perro realiza una parte de su propia rutina y súbalo a un foro público donde los demás participantes puedan dar sus opiniones.</p>
+            <input type="file" accept="video/*">
+            <button class="btn" style="margin-top: 1rem;">Subir video</button>
+        </div>
+    </div>
+    
+    <a href="#" class="btn">Ir al módulo</a>
+</section>
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.innerHTML);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.innerHTML += "<div>" + data + "</div>"; // Muestra el concepto en el área de caída
+}
+</script>
+
+        <section id="modulo5" class="module">
+            <h2>Salud preventiva</h2>
+            <p>La salud de tu perro es fundamental. Este módulo se centra en la prevención de enfermedades y la importancia de las visitas al veterinario.</p>
+            <div class="activity">
+                <h3>Actividad: Test de Salud</h3>
+                <p>Realiza un test que evalúe el estado de salud de tu perro y qué medidas preventivas puedes tomar. Al finalizar, se entregará una lista de recomendaciones personalizadas.</p>
+                <a href="#" class="btn">Realizar el test</a>
+            </div>
+            <div class="mapa-conceptual">
+                <h3>Mapa Conceptual - Bienestar Canino</h3>
+                <p>Los participantes explorarán un mapa conceptual interactivo sobre el bienestar canino, donde podrán arrastrar y soltar conceptos clave en las categorías correctas.</p>
+                <div class="concepts">
+                    <div class="concept">Alimentación</div>
+                    <div class="concept">Ejercicio</div>
+                    <div class="concept">Salud</div>
+                    <div class="concept">Socialización</div>
+                    <div class="concept">Atención veterinaria</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Ir al módulo</a>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Aula Virtual - Bienestar Canino. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
